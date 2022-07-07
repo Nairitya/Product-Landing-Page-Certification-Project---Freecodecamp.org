@@ -21,16 +21,16 @@
       />
 
       <nav id="nav-bar">
-        <ul>
-          <li><a href="#" class="nav-link">Home</a></li>
+        <ul class="navbar-nav">
+          <li><a href="#main" class="nav-link active">Home</a></li>
           <li><a href="#products" class="nav-link">Products</a></li>
-          <li><a href="#" class="nav-link">Gallery</a></li>
-          <li><a href="#" class="nav-link">Shop</a></li>
-          <li><a href="#" class="nav-link">Blog</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#shop" class="nav-link">Shop</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main id="main">
       <section class="video-container">
         <iframe
           id="video"
@@ -100,6 +100,7 @@
           <form action="https://www.freecodecamp.com/email-submit" id="form">
             <fieldset>
               <input
+                name="email"
                 type="email"
                 id="email"
                 placeholder="Enter your e-mail address"
@@ -109,5 +110,11 @@
         </div>
       </section>
     </main>
+    <script>
+      $("a").click(function () {
+        $("a").css("color", "");
+        $(this).css("color", "#df3234");
+      });
+    </script>
   </body>
 </html>
